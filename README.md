@@ -3,7 +3,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-v20.x-339933?logo=node.js)
 ![discord.js](https://img.shields.io/badge/discord.js-v14-5865F2?logo=discord&logoColor=white)
-![Daggerheart](https://img.shields.io/badge/1.4-yellow.svg)
 
 Um bot para Discord feito em discord.js para auxiliar em mesas de RPG, com foco no sistema Daggerheart, mas também com funcionalidades genéricas.
 
