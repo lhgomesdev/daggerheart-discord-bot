@@ -13,13 +13,6 @@
 - **/fear**: Um rastreador para o nível de "Medo" da mesa, com dados salvos persistentemente em um arquivo `db.json`.
 - **/ficha**: Um sistema de ficha de personagem simples onde jogadores podem salvar e consultar seus status (HP, Shield, Stress, Hope). Mestres podem editar a ficha de outros jogadores.
 
-## Funcionalidades
-
-- **/dh**: Rola os dados de dualidade (Esperança e Medo) de Daggerheart, com suporte a modificadores e rolagens críticas.
-- **/rolar**: Um rolador de dados universal. Suporta o formato `XdY` (ex: `2d6`, `1d20`) e modificadores.
-- **/fear**: Um rastreador para o nível de "Medo" da mesa, com dados salvos persistentemente.
-- **/ficha**: Um sistema de ficha de personagem simples onde jogadores podem salvar e consultar seus status (HP, Shield, Stress, Hope). Mestres podem editar a ficha de outros jogadores.
-
 ## Como Instalar e Rodar
 
 Siga os passos abaixo para hospedar sua própria instância do bot.
