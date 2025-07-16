@@ -1,4 +1,5 @@
 // index.js
+
 require('dotenv').config();
 const fs = require('node:fs');
 const path = require('node:path');
@@ -9,7 +10,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 // Carregador de Comandos
 client.commands = new Collection();
-const commandsPath = path.join(__dirname, 'commands');
+const commandsPath = path.join(__dirname, 'src', 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
     const filePath = path.join(commandsPath, file);
@@ -18,7 +19,7 @@ for (const file of commandFiles) {
 }
 
 // Carregador de Eventos
-const eventsPath = path.join(__dirname, 'events');
+const eventsPath = path.join(__dirname, 'src', 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {
     const filePath = path.join(eventsPath, file);

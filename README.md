@@ -21,7 +21,7 @@ Siga os passos abaixo para hospedar sua própria instância do bot.
 
 1.  **Clone o Repositório**
     ```bash
-    git clone [https://github.com/lhgomesdev/daggerheart-discord-bot.git](https://github.com/lhgomesdev/daggerheart-discord-bot.git)
+    git clone https://github.com/lhgomesdev/daggerheart-discord-bot
     cd daggerheart-discord-bot
     ```
 
@@ -70,3 +70,5 @@ Siga os passos abaixo para hospedar sua própria instância do bot.
 -   `/inimigo listar` - Mostra um painel com todos os inimigos ativos.
 -   `/inimigo adicionar nome: Esqueleto hp: 13 difficulty: 12` - Adiciona um inimigo ao combate. O bot informará o ID único dele.
 -   `/inimigo editar id: [use-o-autocomplete] hp: 8` - Edita o HP de um inimigo. Comece a digitar o nome e o autocompletar irá sugerir o inimigo certo para selecionar.
+
+![Demonstração do Bot](./assets/demo.gif)

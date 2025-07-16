@@ -1,7 +1,7 @@
 // commands/ficha.js
 
 const { SlashCommandBuilder, EmbedBuilder, MessageFlags } = require('discord.js');
-const { readData, writeData } = require('../database.js');
+const { readData, writeData } = require('../utils/database.js');
 
 const statusFields = ['hp', 'shield', 'stress', 'hope'];
 
