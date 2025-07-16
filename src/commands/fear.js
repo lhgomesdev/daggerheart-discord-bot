@@ -1,7 +1,7 @@
 // commands/fear.js
 
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { readData, writeData } = require('../database.js');
+const { readData, writeData } = require('../utils/database.js');
 
 const skullImages = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Noto_Emoji_v2.034_1f480.svg/1200px-Noto_Emoji_v2.034_1f480.svg.png',

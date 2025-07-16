@@ -1,7 +1,7 @@
 // commands/ficha.js
 
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { readData, writeData } = require('../database.js');
+const { readData, writeData } = require('../utils/database.js');
 
 const statusFields = ['hp', 'shield', 'stress', 'hope'];
 
@@ -41,7 +41,7 @@ module.exports = {
             if (targetUser && targetUser.id !== interaction.user.id) {
                 // verificamos se quem usou o comando tem o cargo "Mestre".
                 if (!interaction.member.roles.cache.some(role => role.name === 'Mestre')) {
-                    return interaction.reply({ content: 'Você não tem permissão para modificar a ficha de outros jogadores.', ephemeral: true });
+                    return interaction.reply({ content: 'Você não tem permissão para modificar a ficha de outros jogadores.', flags: MessageFlags.Ephemeral });
                 }
             }
             
@@ -62,11 +62,11 @@ module.exports = {
             });
 
             if (changes === 0) {
-                return interaction.reply({ content: 'Você precisa fornecer pelo menos um status para definir.', ephemeral: true });
+                return interaction.reply({ content: 'Você precisa fornecer pelo menos um status para definir.', flags: MessageFlags.Ephemeral });
             }
 
             writeData(db);
-            await interaction.reply({ content: responseMessage, ephemeral: true });
+            await interaction.reply({ content: responseMessage, flags: MessageFlags.Ephemeral });
 
         } else if (subcommand === 'ver') {
             const targetUser = interaction.options.getUser('usuario') || interaction.user;
@@ -74,7 +74,7 @@ module.exports = {
             const userData = db[guildId].users[userId];
 
             if (!userData) {
-                return interaction.reply({ content: `O usuário **${targetUser.username}** ainda não tem uma ficha salva.`, ephemeral: true });
+                return interaction.reply({ content: `O usuário **${targetUser.username}** ainda não tem uma ficha salva.`, flags: MessageFlags.Ephemeral });
             }
 
             const embed = new EmbedBuilder()
