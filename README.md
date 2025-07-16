@@ -69,7 +69,7 @@ Siga os passos abaixo para hospedar sua própria instância do bot.
 #### Gerenciamento de Jogo (Mestre)
 -   `/fear adicionar valor: 1` - Aumenta o Medo da mesa em 1.
 -   `/inimigo listar` - Mostra um painel com todos os inimigos ativos.
--   `/inimigo adicionar nome: Esqueleto hp: 13 difficulty: 12` - Adiciona um inimigo ao combate. O bot informará o ID único dele.
+-   `/inimigo adicionar nome: Bandido hp: 5 stress: 3 difficulty: 12 threshold: 8/14` - Adiciona um inimigo ao combate. O bot informará o ID único dele.
 -   `/inimigo editar id: [use-o-autocomplete] hp: 8` - Edita o HP de um inimigo. Comece a digitar o nome e o autocompletar irá sugerir o inimigo certo para selecionar.
 
 ![Demonstração do Bot](./assets/demo.gif)
