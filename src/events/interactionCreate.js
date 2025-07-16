@@ -1,4 +1,5 @@
 // events/interactionCreate.js
+
 const { MessageFlags } = require('discord.js');
 
 module.exports = {
@@ -25,7 +26,6 @@ module.exports = {
             } catch (error) {
                 console.error(`Erro ao executar o comando '${interaction.commandName}' por '${interaction.user.tag}'.`, error);
                 
-                // Verifica se a interação já foi respondida ou deferida
                 if (interaction.replied || interaction.deferred) {
                     await interaction.followUp({ content: 'Houve um erro ao executar este comando!', flags: MessageFlags.Ephemeral });
                 } else {

@@ -22,7 +22,7 @@ Siga os passos abaixo para hospedar sua própria instância do bot.
 1.  **Clone o Repositório**
     ```bash
 <<<<<<< Updated upstream
-    git clone [https://github.com/lhgomesdev/daggerheart-discord-bot.git](https://github.com/lhgomesdev/daggerheart-discord-bot.git)
+    git clone https://github.com/lhgomesdev/daggerheart-discord-bot
     cd daggerheart-discord-bot
 =======
     git clone https://github.com/lhgomesdev/daggerheart-discord-bot
@@ -61,9 +61,17 @@ Siga os passos abaixo para hospedar sua própria instância do bot.
 
 ## Exemplos de Uso
 
-- `/dh modificador: 1` - Rola os dados de Daggerheart com +1 de bônus.
-- `/rolar dados: 3d8 modificador: -2` - Rola 3d8 e subtrai 2 do total.
-- `/fear adicionar valor: 1` - Aumenta o Medo da mesa em 1.
-- `/ficha definir hp: 12 shield: 5` - Define seus status de HP e Shield.
-- `/ficha ver usuario: @Amigo` - Vê a ficha de outro jogador.
+#### Rolagens
+-   `/dh modificador: 1` - Rola os dados de Daggerheart com +1 de bônus.
+-   `/rolar dados: 3d8 modificador: -2` - Rola 3d8 e subtrai 2 do total.
 
+#### Ficha de Personagem
+-   `/ficha definir hp: 12 stress: 2` - Define os status da sua ficha.
+-   `/ficha ver` - Mostra a sua ficha atual.
+-   `/ficha definir hp: 8 usuario: @Amigo` - (Apenas para Mestres) Edita a ficha de outro jogador.
+
+#### Gerenciamento de Jogo (Mestre)
+-   `/fear adicionar valor: 1` - Aumenta o Medo da mesa em 1.
+-   `/inimigo listar` - Mostra um painel com todos os inimigos ativos.
+-   `/inimigo adicionar nome: Esqueleto hp: 13 difficulty: 12` - Adiciona um inimigo ao combate. O bot informará o ID único dele.
+-   `/inimigo editar id: [use-o-autocomplete] hp: 8` - Edita o HP de um inimigo. Comece a digitar o nome e o autocompletar irá sugerir o inimigo certo para selecionar.
