@@ -7,8 +7,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const commands = [];
-// Pega todos os arquivos de comando do diretório 'commands'
-const commandsPath = path.join(__dirname, 'commands');
+const commandsPath = path.join(__dirname, 'src', 'commands');
 const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -21,17 +20,14 @@ for (const file of commandFiles) {
     }
 }
 
-// Constrói e prepara uma instância do módulo REST
 const rest = new REST().setToken(token);
 
-// E faz o deploy dos seus comandos!
 (async () => {
     try {
         console.log(`Iniciando a atualização de ${commands.length} comandos (/) da aplicação.`);
 
-        // O método put é usado para atualizar todos os comandos da guilda com o conjunto atual
         const data = await rest.put(
-            Routes.applicationGuildCommands(clientId, guildId), // Use applicationCommands(clientId) para comandos globais
+            Routes.applicationGuildCommands(clientId, guildId),
             { body: commands },
         );
 

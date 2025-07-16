@@ -1,6 +1,7 @@
 // commands/inimigo.js
+
 const { SlashCommandBuilder, EmbedBuilder, MessageFlags } = require('discord.js');
-const { readData, writeData } = require('../database.js');
+const { readData, writeData } = require('../utils/database.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
